@@ -1,0 +1,9 @@
+<div class="container">
+    <input type="file" #fileUpload id="fileUpload" name="fileUpload" accept="image/*">
+    <button mat-button color="primary" (click)="submitImg()">
+        Upload
+        <mat-icon *ngIf="loading">
+            <mat-spinner color="primary" diameter="20"></mat-spinner>
+        </mat-icon>
+    </button> 
+</div>

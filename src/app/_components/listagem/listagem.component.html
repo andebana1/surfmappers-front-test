@@ -1,0 +1,16 @@
+<div class="container">
+    <mat-spinner *ngIf="loading"></mat-spinner>
+    <div fxLayout="row wrap" fxLayoutGap="16px grid" *ngIf="!loading">
+      <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let data of images">
+        <mat-card class="mat-elevation-z4">
+          <mat-card-header>
+            <mat-card-title>Imagem {{data.id}}</mat-card-title>
+          </mat-card-header>
+          <img (click)="openDialog(data)" mat-card-image [src]="data.image">
+          <mat-card-actions>
+            <button mat-button (click)="openDialog(data)">Visualizar</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>

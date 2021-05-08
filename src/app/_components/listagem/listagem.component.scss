@@ -1,0 +1,29 @@
+:host{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  padding: 16px;
+}
+
+img{
+  height: 110px;
+}
+
+img:hover{
+  cursor: pointer;
+}
+
+mat-card {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 16px;
+}

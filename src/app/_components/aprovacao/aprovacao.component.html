@@ -1,0 +1,18 @@
+<div class="container">
+    <mat-spinner *ngIf="loading"></mat-spinner>
+    <mat-list>
+        <div mat-subheader>Aguardando aprovação</div>
+        <mat-list-item *ngFor="let data of images">
+           <img mat-list-avatar [src]="data.image">
+            <div mat-line>{{data.id}}</div>
+            <div mat-line>
+                <button mat-button color="primary" (click)="openDialog(data)">
+                    Visualizar
+                </button>
+                <button mat-button color="primary" (click)="approveImg(data.id)">
+                    Aprovar
+                </button>
+            </div>
+        </mat-list-item>
+    </mat-list>
+</div>
